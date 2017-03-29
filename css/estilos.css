@@ -1,0 +1,54 @@
+body {
+	background-color: #f2e8ce;
+}
+.casilla
+{
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+
+.casillaVacia
+{
+	background-color: #f2e8ce;
+}
+
+.casillaJugador
+{
+	width: 20px;
+	height: 20px;
+	background: url(../images/usuario.png);
+}
+
+.casillaCaja
+{
+	width: 20px;
+	height: 20px;
+	background: url(../images/caja.png);
+}
+
+.casillaCajaEnDestino
+{
+	background-color: #C49323;
+}
+
+.casillaJugadorEnDestino
+{
+	background-color: #28AFCA;
+	width: 20px;
+	height: 20px;
+	background: url(../images/usuario.png);
+}
+.casillaDestino
+{
+	background-color: #dfcb98;
+}
+
+.casillaPared
+{
+	
+	width: 20px;
+	height: 20px;
+	background: url(../images/muro2.png);
+	
+}

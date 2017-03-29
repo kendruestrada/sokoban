@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+<script type="text/javascript" src="js/sokoban.js" ></script>
+<link href="css/estilos.css" media="all" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div width="100%">
+	<div id="contenedorJuego"  style="float: left;; width: 60%">Sokoban</div>
+
+	<div id="resultado"  style="float: left; width: 30%">
+			Movimientos:<br/>
+			 <textarea id="movimientos" rows="10" cols="50">
+			
+			</textarea> 
+	<div>
+</div>
+
+<script>
+
+$('#contenedorJuego').sokoban();
+
+window.onkeyup = function(e) {
+	 var code = e.keyCode ? e.keyCode : e.which;
+	if ( code == 37 ) {
+		if(Sokoban.realizarMovimiento("izq")){
+			$('#movimientos').val($('#movimientos').val() + "\n" + "izquierda");
+		}
+	}else if ( code == 38 ) {
+		if(Sokoban.realizarMovimiento("arriba")){
+			$('#movimientos').val($('#movimientos').val() + "\n" + "arriba");
+		}
+	}else if ( code == 39 ) {
+		if(Sokoban.realizarMovimiento("der")){
+			$('#movimientos').val($('#movimientos').val() + "\n" + "derecha");
+		}
+	}else if ( code == 40 ) {
+		if(Sokoban.realizarMovimiento("abajo")){
+			$('#movimientos').val($('#movimientos').val() + "\n" + "abajo");
+		}
+	}	
+}
+
+
+</script>
+
+</body>
+
+<html>
